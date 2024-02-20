@@ -1,0 +1,26 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 277, in script
+    python:
+  File "game/script.rpy", line 280, in <module>
+    o.write(renpy.exists("files_functions.py"))
+TypeError: write() argument must be str, not bool
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 277, in script
+    python:
+  File "D:\renpy\renpy-8.2.0-sdk\renpy\ast.py", line 823, in execute
+    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
+  File "D:\renpy\renpy-8.2.0-sdk\renpy\python.py", line 1178, in py_exec_bytecode
+    exec(bytecode, globals, locals)
+  File "game/script.rpy", line 280, in <module>
+    o.write(renpy.exists("files_functions.py"))
+TypeError: write() argument must be str, not bool
+
+Windows-10-10.0.22621 AMD64
+Ren'Py 8.2.0.24012702
+Gachipunk 3season Игра разума
+Tue Feb 20 15:49:35 2024
