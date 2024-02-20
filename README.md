@@ -19,5 +19,5 @@
 
 ![image](https://github.com/GachipunkProduction/Gachipunk3Season/assets/151411352/f6cba8e6-7cab-4d82-9743-33dc335f2787)
 
-
+5. Работайте блять.
 
