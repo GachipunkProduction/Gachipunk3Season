@@ -1,10 +1,19 @@
 ﻿# Вы можете расположить сценарий своей игры в этом файле.
 #config.gamedir - основная директория игры
+
+screen black_screen:
+    image "black.jpg"
+
+
+
+
 init python:
     def send_to_file(filename, text):
         with open(config.gamedir + "/" + filename, "w") as o_w:
             o_w.write(text)
         return
+    renpy.add_layer("black_screen", below = "overlay")
+    
     
     
 
@@ -15,7 +24,6 @@ define audio.start_music = "audio/music/start.mp3"
 define audio.glitch1 = "audio/sounds/glitch1.mp3"
 define audio.glitch2 = "audio/sounds/glitch2.mp3"
 define audio.glitch3 = "audio/sounds/glitch3.mp3"
-
 
 
 
@@ -206,16 +214,8 @@ image startukrop:
 
 # Игра начинается здесь:
 label start:
-    $ style.say_window = style.window_CUSTOM #активировал первое диалоговое окно
-    hide window
-    show window
-    
-
-    scene black
-    
-
+    #$ style.say_window = style.window_CUSTOM #активировал первое диалоговое окно
     gachipunk  "{cps=30}Всем привет! {w=1} С вами Гачипанк Димитрик. {w=2} Вы позволите мне протянуть чуть дольше? {/cps}"
-
     scene start with fade
     play music start_music
 
@@ -274,10 +274,14 @@ label start:
 
     
     gachipunk_red "{cps=50} Успехов. {/cps} {w}{cps=100} И да, я знаю, что в моём шрифте 'н' похожа на 'к'.{/cps}{nw}"
-    
-    $ send_to_file("notes", "https://disk.yandex.ru/d/G6tH94Qjik1Y6g")
-        
+    jump logo
+    return
 
+label logo:
+    $ preferences.afm_enable = True #два щелчка для пропуска кастцены
+    $ send_to_file("notes", "https://disk.yandex.ru/d/G6tH94Qjik1Y6g")
+    $ renpy.movie_cutscene("movies/mega_logo.webm")
+    jump test
     return
 
 
@@ -303,8 +307,14 @@ label save_no:
     gachipunk_red "{cps=30} Я не буду вас переубеждать. {w=1} Но помните, что в игре нет автосохранений.{/cps}"
     return
 
+label test:
+    $ preferences.afm_enable = False
+    show start2 
+    gachipunk "Продолжение следует..."
+    return
+
 
 
 
     
-# для маши всё ярко, для димона всё тускло (пример с парком: маша - яркое живописное место, птички, бабочки, люди, которые выгуливают своих питомцев, димон - бомж на скамейке, мрачно, сыро, холодно, печально, людей нет или люди в тёмных или светлых тонах без лиц)
+# для маши всё ярко, для димона всё тускло (пример с парком:маша-яркое живописное место, птички, бабочки, люди, которые выгуливают своих питомцев, димон - бомж на скамейке, мрачно, сыро, холодно, печально, людей нет или люди в тёмных или светлых тонах без лиц)

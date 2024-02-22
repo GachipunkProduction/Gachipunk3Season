@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 281: invalid syntax
-    open("test.txt", "w") as o:
-                           ^
+File "game/script.rpy", line 281: expected statement.
+    zorder 1000 
+    ^
 
 Ren'Py Version: Ren'Py 8.2.0.24012702
-Tue Feb 20 15:43:16 2024
+Thu Feb 22 18:30:16 2024

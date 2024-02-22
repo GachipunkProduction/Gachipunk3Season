@@ -138,7 +138,7 @@ style window:
     yalign gui.textbox_yalign
     ysize gui.textbox_height
 
-    background Image("gui/textboxpass.jpg", xalign=0.5, yalign=1.0)
+    background Image("gui/textbox.jpg", xalign=0.5, yalign=1.0)
 
 style window_CUSTOM is window: #таким макаром добавляем диалоговые окна (не для разных персонажей, а для разных меток!!!)
     background Image("gui/textbox.jpg", xalign=0.5, yalign=1.0)
