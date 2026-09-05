@@ -268,9 +268,9 @@ label start:
     menu:
         gachipunk "Сохраниться???"
         "Конечно!":
-            call save_yes from _call_save_yes
+            call save_yes
         "Ни за что на свете!":
-            call save_no from _call_save_no
+            call save_no
 
     
     gachipunk_red "{cps=50} Успехов. {/cps} {w}{cps=100} И да, я знаю, что в моём шрифте 'н' похожа на 'к'.{/cps}{nw}"

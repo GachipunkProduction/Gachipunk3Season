@@ -23,7 +23,7 @@ define gui.show_name = True
 
 ## Версия игры.
 
-define config.version = "Игра разума"
+define config.version = "Игра_разума"
 
 
 ## Текст, помещённый в экран "Об игре". Поместите текст между тройными скобками.
